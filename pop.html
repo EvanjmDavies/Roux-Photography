@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="animated fadeIn">
+
+  <head>
+
+    <title>Vincent Lazaro</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <link rel="stylesheet" href="pop.css"></link>
+
+      <script type="text/javascript">
+        jQuery(function($) {
+          $('#img1').click(function() {
+            var img= $(this).attr("src");
+             var appear_image = "<div id='appear_image_div' onClick='closeImage()'></div>";
+             appear_image = appear_image.concat("<img id="appear_image" src='"+img+"' />");
+             appear_image = appear_image.concat("<img id="close_image" onClick='closeImage()' src='"close.png"' />");
+             $('body').append(appear_image);
+          });
+        });
+        function closeImage () {
+          $('#appear_image_div').remove();
+          $('#appear_image').remove();
+        }
+     </script>
+
+  </head>
+
+  <body>
+
+    <img id="img1" src="img/baby.jpg" alt="baby"></img>
+
+<!--    <header>
+          <div class="main-header">
+            <div class='container'>
+              <div class='nav'>
+                <ul>
+                  <li class='nav-main'><a href='Main.html'>Home</a></li>
+                  <li class='nav-about'><a href='About.html'>About</a> </li>
+                  <li class='nav-port'><a href='portfolio.html'>Portfolio</a></li>
+                  <li class='nav-contact'><a href='Contact.html'>Get in Touch</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </header>
+-->
+  </body>
+<footer>
+</footer>
+</html>
